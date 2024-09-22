@@ -29,5 +29,7 @@ module Maybe
     config.active_job.queue_adapter = :good_job
 
     config.app_mode = (ENV["SELF_HOSTING_ENABLED"] == "true" ? "self_hosted" : "managed").inquiry
+
+    config.assets.precompile += %w( tailwind.css )
   end
 end

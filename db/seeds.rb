@@ -3,3 +3,6 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
 puts 'Run the following command to create demo data: `rake demo_data:reset`' if Rails.env.development?
+
+family = Family.create!(name: 'Default Family')
+User.create!(email: 'user@maybe.local', password: 'password', family: family)
